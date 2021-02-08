@@ -1,6 +1,6 @@
 const express = require('express');
-const cors = required('cors');
-const mongoose = required('mongoose');
+const cors = require('cors');
+const mongoose = require('mongoose');
 
 // Iniciando o App
 const app = express();
@@ -12,7 +12,12 @@ mongoose.connect('mongodb://localhost:27017/debt',
     {useNewUrlParser: true, useUnifiedTopology: true}
 );
 
+require('./src/models/Debt');
+
 // Rotas
-app.use('/api', require('./src/routes'));
+app.use('/debt-api', require('./src/routes'));
+
+
+
 
 app.listen(3001);
