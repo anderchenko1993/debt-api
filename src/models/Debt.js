@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 const DebtSchema = new mongoose.Schema({
-    id_usuario: {
-        type: Number,
+    usuario: {
+        type: { id: Number, name: String },
         required: true,
     },
     motivo: {
