@@ -3,7 +3,7 @@ const DebtController = require('./controllers/DebtController');
 const routes = express.Router();
 
 routes.get('/debts', DebtController.index);
-routes.get('/debt/:id', DebtController.show);
+routes.get('/debts/:id', DebtController.show);
 routes.post('/debts', DebtController.store);
 routes.put('/debts/:id', DebtController.update);
 routes.delete('/debts/:id', DebtController.destroy);
